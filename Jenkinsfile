@@ -1,5 +1,10 @@
 pipeline {
-    agent { docker { image 'python:3.11-slim; args -u root:root' } }
+    agent {
+        docker {
+            image 'python:3.11-slim'
+            args '-u root:root'
+        }
+    }
  
     environment {
         PYTHONUNBUFFERED = '1'
